@@ -1,0 +1,8 @@
+*.pyc
+**/build/**
+**/poetry.lock
+SRG\ Approximation/Python/output/SRG_frames_*/**
+*.pdf
+*.svg
+*.mp4
+*.png

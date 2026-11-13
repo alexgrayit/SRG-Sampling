@@ -1,0 +1,3 @@
+[submodule "SRG Approximation/SRG Approx Testing GPU/include/integrators/lsoda-cuda"]
+	path = SRG Approximation/SRG Approx Testing GPU/include/integrators/lsoda-cuda
+	url = https://github.com/TLAJ/lsoda-cuda

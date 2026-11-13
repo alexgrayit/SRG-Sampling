@@ -1,0 +1,49 @@
+package simulation_messages;
+
+struct startSim
+{
+    string sim_name;
+}
+
+struct DragState
+{
+    double t; // Time
+    int32_t n_state;
+    double x[n_state];
+    double u;
+}
+
+struct SRGState
+{
+    double L2_x;
+    double L2_v;
+    double T;
+    double x_norm;
+    double v_norm;
+    double u_norm;
+}
+
+struct SRGBatch
+{
+    int32_t n;
+    
+    double L2_x[n];
+    double L2_v[n];
+    double x_norm[n];
+    double v_norm[n];
+    double u_norm[n];
+}
+// Sent once after Python's startSim readiness message.
+struct SimInfo
+{
+    double k_d;
+    double k_p;
+    boolean linear_drag;
+}
+
+// Sent after the final result batch, including a graceful cancellation.
+struct SimDone
+{
+    int64_t n_simulations;
+    boolean cancelled;
+}
